@@ -4,7 +4,7 @@
 // Could be broken into a different js file, maybe app.js
 $(document).ready(function(){
   $.ajax({
-    url: "https://scale-up2018.herokuapp.com/api/data",
+    url: "https://scale-up20182.herokuapp.com/api/data",
     method: "GET",
     dataType: 'json',
     success: function(data){
