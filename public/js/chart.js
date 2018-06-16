@@ -33,7 +33,7 @@ $(document).ready(function(){
       ]
       console.log(utilityNames);
 
-      utilityPercent=[
+      utilityPercent1=[
         data.Utilities["0"].percent_utilizations1,
         data.Utilities["0"].percent_utilizations2,
         data.Utilities["0"].percent_utilizations3,
@@ -41,14 +41,20 @@ $(document).ready(function(){
       ]
       console.log(utilityPercent);
 
+      utilityPercent2=[
+        data.Utilities["1"].percent_utilizations1,
+        data.Utilities["1"].percent_utilizations2,
+        data.Utilities["1"].percent_utilizations3,
+        data.Utilities["1"].percent_utilizations4
+      ]
 
 
       var chart1data ={
         labels: utilityNames,
         datasets: [{
-          label: 'Percent Used first row',
+          label: ['Zone 1', 'Zone 2'],
           backgroundColor: 'rgba(60, 80, 235, 0.8)',
-          data: utilityPercent
+          data: [utilityPercent1, utilityPercent2]
         }],
       };
 
@@ -56,7 +62,7 @@ $(document).ready(function(){
       const chartOne = document.getElementById('chartOne');
       Chart.defaults.global.defaultFontFamily = 'lato';
       Chart.defaults.global.defaultFontSize = 17;
-      Chart.defaults.global.defaultFontColor = 'black';
+      Chart.defaults.global.defaultFontColor = 'white';
       
       var barChartOne = new Chart(chartOne, {
         type: 'bar',
@@ -78,13 +84,6 @@ $(document).ready(function(){
 
 
 
-// chart 2
-utilityNames=[
-  data.Utilities["1"].utility1name,
-  data.Utilities["1"].utility2name,
-  data.Utilities["1"].utility3name,
-  data.Utilities["1"].utility4name
-]
 //console.log(utilityNames);
 
 utilityPercent=[
