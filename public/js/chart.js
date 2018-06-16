@@ -16,8 +16,6 @@ $(document).ready(function(){
       for(var i in data.Buildings) {
         buildingNames.push(data.Buildings[i].building_name);
         zoneNames.push(data.Zones[i].plant_zones);
-        // multiple utilities in single row, how are we looking to chart this data?
-        // utilityNames.push(data[i].utility1name);
       }
       console.log(buildingNames);
       console.log(zoneNames);
@@ -52,9 +50,14 @@ $(document).ready(function(){
       var chart1data ={
         labels: utilityNames,
         datasets: [{
-          label: ['Zone 1', 'Zone 2'],
+          label: 'Zone 1',
           backgroundColor: 'rgba(60, 80, 235, 0.8)',
-          data: [utilityPercent1, utilityPercent2]
+          data: utilityPercent1
+          },
+          {
+            label: 'Zone 2',
+            backgroundColor: 'rgba(40, 100, 235, 0.8)',
+            data: utilityPercent2
         }],
       };
 
@@ -81,18 +84,6 @@ $(document).ready(function(){
             text: 'This is ' + buildingNames[0] + ' ' + zoneNames[0] 
           }},
       });
-
-
-
-//console.log(utilityNames);
-
-utilityPercent=[
-  data.Utilities["1"].percent_utilizations1,
-  data.Utilities["1"].percent_utilizations2,
-  data.Utilities["1"].percent_utilizations3,
-  data.Utilities["1"].percent_utilizations4
-]
-//console.log(utilityPercent);
 
 
 
