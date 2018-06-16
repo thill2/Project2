@@ -44,7 +44,7 @@ Navigate over to the results page, and you'll see the percent utilization for ea
 ## Authors
 This app was built by Jeannie Rose, Walheed Hamza, & Tony Hill.
 
-# Issues we encountered
+## Issues we encountered
 The charts on the results page are not generated dynamically, and expecting data to be entered exactly as explained above.  Given more time we could have added this functionality. 
 
 The foreign keys in mySql are not operating as intended.  Because they are based off of primary keys which are autoincrementing, each time a building or zone is entered, a new primary key and thus new foreign key is created.  This could have been resolved by generating foreign keys based on building or zone names as opposed to primary keys.
