@@ -67,7 +67,7 @@ $(document).ready(function(){
               label: 'Zone 3',
               backgroundColor: 'rgba(20, 120, 235, 0.8)',
               data: utilityPercent3
-        }]
+        }],
       };
 
       // Actual chart creation
@@ -130,7 +130,7 @@ var chart2data ={
         label: 'Zone 3',
         backgroundColor: 'rgba(20, 120, 235, 0.8)',
         data: utilityPercent6
-  }]
+  }],
 };
 
 // Actual chart creation
