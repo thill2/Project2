@@ -14,14 +14,6 @@ module.exports = function(sequelize, DataTypes) {
         is: ["[A-Za-z0-9\s_]+"],
       }
     }
-    // ,
-    // building_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'buildings',
-    //     key: 'id',
-    //   }
-    // }
   }, {
     timestamps: false
 });
@@ -35,10 +27,6 @@ Zones.associate = function(models) {
     }
   });
 };
-
-  // // associates buildings to zones
-  // Zones.belongsTo(buildingsModel);
-
 
   return Zones;
 };

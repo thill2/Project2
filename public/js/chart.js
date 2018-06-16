@@ -20,8 +20,6 @@ $(document).ready(function(){
       console.log(buildingNames);
       console.log(zoneNames);
 
-
-      // These arrays are being generated but not used, will become Chart labels
       
       utilityNames=[
         data.Utilities["0"].utility1name,
@@ -133,7 +131,7 @@ var chart2data ={
   }],
 };
 
-// Actual chart creation
+// Actual chart2 creation
 const chartTwo = document.getElementById('chartTwo');
 
 var barChartTwo = new Chart(chartTwo, {

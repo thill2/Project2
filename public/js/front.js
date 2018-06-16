@@ -2,7 +2,6 @@
 $(document).ready(function () {
   //Materialize Select 
   $('select').material_select();
-
   $('.grid').isotope({
     // options
     itemSelector: '.grid-item',
@@ -45,9 +44,7 @@ function insertZone() {
   console.log('this is the zone var front.js', zone);
 
   //clear inputs
-  // $("#building").empty();
   $("#building").val("");
-  // $("#zone").empty();
   $("#zone").val("");
   $("#electricUsed").val("");
   $("#electricCap").val("");

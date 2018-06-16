@@ -5,15 +5,6 @@ module.exports = function(sequelize, DataTypes) {
 
 
   var Utilities = sequelize.define("Utilities", {
-    // zone_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'zones',
-    //     key: 'id',
-    //   }
-    // }
-    // ,
-    // utility 1
     utility1name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -51,10 +42,6 @@ module.exports = function(sequelize, DataTypes) {
         notEmpty: true,
       }
     },
-
-
-
-
     utility2name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -91,11 +78,6 @@ module.exports = function(sequelize, DataTypes) {
         notEmpty: true,
       }
     },
-
-
-
-
-
     utility3name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -132,11 +114,6 @@ module.exports = function(sequelize, DataTypes) {
         notEmpty: true,
       }
     },
-
-
-
-
-
     utility4name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -174,8 +151,6 @@ module.exports = function(sequelize, DataTypes) {
         notEmpty: true,
       }
     }
-
-
   }, {
       timestamps: false
   });
@@ -183,8 +158,6 @@ module.exports = function(sequelize, DataTypes) {
 
 
   Utilities.associate = function(models) {
-    // We're saying that a Utility should belong to a Zone
-    // A Utility can't be created without a Zone due to the foreign key constraint
     Utilities.belongsTo(models.Zones, {
       foreignKey: {
         allowNull: false
@@ -192,8 +165,6 @@ module.exports = function(sequelize, DataTypes) {
     });
   };
 
-  // // associates zones to utilities
-  // Utilities.belongsTo(zoneModels);
 
 
   return Utilities;
