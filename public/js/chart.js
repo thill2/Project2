@@ -73,7 +73,7 @@ $(document).ready(function(){
       // Actual chart creation
       const chartOne = document.getElementById('chartOne');
       Chart.defaults.global.defaultFontFamily = 'lato';
-      Chart.defaults.global.defaultFontSize = 17;
+      Chart.defaults.global.defaultFontSize = 16;
       Chart.defaults.global.defaultFontColor = 'white';
       
       var barChartOne = new Chart(chartOne, {
