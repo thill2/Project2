@@ -37,7 +37,6 @@ $(document).ready(function(){
         data.Utilities["0"].percent_utilizations3,
         data.Utilities["0"].percent_utilizations4
       ]
-      console.log(utilityPercent);
 
       utilityPercent2=[
         data.Utilities["1"].percent_utilizations1,
@@ -92,7 +91,7 @@ var chart2data ={
   datasets: [{
     label: 'Percent Used second row',
     backgroundColor: 'rgba(60, 100, 200, 0.8)',
-    data: utilityPercent
+    data: utilityPercent2
   }],
 };
 
