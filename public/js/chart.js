@@ -45,6 +45,13 @@ $(document).ready(function(){
         data.Utilities["1"].percent_utilizations4
       ]
 
+      utilityPercent3=[
+        data.Utilities["2"].percent_utilizations1,
+        data.Utilities["2"].percent_utilizations2,
+        data.Utilities["2"].percent_utilizations3,
+        data.Utilities["2"].percent_utilizations4
+      ]
+
 
       var chart1data ={
         labels: utilityNames,
@@ -52,11 +59,14 @@ $(document).ready(function(){
           label: 'Zone 1',
           backgroundColor: 'rgba(60, 80, 235, 0.8)',
           data: utilityPercent1
-          },
-          {
+          },{
             label: 'Zone 2',
             backgroundColor: 'rgba(40, 100, 235, 0.8)',
             data: utilityPercent2
+          },{
+              label: 'Zone 3',
+              backgroundColor: 'rgba(20, 120, 235, 0.8)',
+              data: utilityPercent3
         }],
       };
 
@@ -80,18 +90,46 @@ $(document).ready(function(){
           },
           title:{
             display: true,
-            text: 'This is ' + buildingNames[0] + ' ' + zoneNames[0] 
+            text: 'This is ' + buildingNames[0] 
           }},
       });
 
 
+      utilityPercent4=[
+        data.Utilities["3"].percent_utilizations1,
+        data.Utilities["3"].percent_utilizations2,
+        data.Utilities["3"].percent_utilizations3,
+        data.Utilities["3"].percent_utilizations4
+      ]
+
+      utilityPercent5=[
+        data.Utilities["4"].percent_utilizations1,
+        data.Utilities["4"].percent_utilizations2,
+        data.Utilities["4"].percent_utilizations3,
+        data.Utilities["4"].percent_utilizations4
+      ]
+
+      utilityPercent6=[
+        data.Utilities["5"].percent_utilizations1,
+        data.Utilities["5"].percent_utilizations2,
+        data.Utilities["5"].percent_utilizations3,
+        data.Utilities["5"].percent_utilizations4
+      ]
 
 var chart2data ={
   labels: utilityNames,
   datasets: [{
-    label: 'Percent Used second row',
-    backgroundColor: 'rgba(60, 100, 200, 0.8)',
-    data: utilityPercent2
+    label: 'Zone 1',
+    backgroundColor: 'rgba(60, 80, 235, 0.8)',
+    data: utilityPercent4
+    },{
+      label: 'Zone 2',
+      backgroundColor: 'rgba(40, 100, 235, 0.8)',
+      data: utilityPercent5
+    },{
+        label: 'Zone 3',
+        backgroundColor: 'rgba(20, 120, 235, 0.8)',
+        data: utilityPercent6
   }],
 };
 
@@ -112,7 +150,7 @@ var barChartTwo = new Chart(chartTwo, {
     },
     title:{
       display: true,
-      text: 'This is ' + buildingNames[1] + ' ' + zoneNames[1] 
+      text: 'This is ' + buildingNames[4] 
     }},
 });
 
