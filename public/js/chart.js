@@ -68,6 +68,7 @@ $(document).ready(function(){
               backgroundColor: 'rgba(20, 120, 235, 0.8)',
               data: utilityPercent3
         }],
+        yAxisID: "Percent Utilzation"
       };
 
       // Actual chart creation
@@ -131,6 +132,7 @@ var chart2data ={
         backgroundColor: 'rgba(20, 120, 235, 0.8)',
         data: utilityPercent6
   }],
+    yAxisID: "Percent Utilzation"
 };
 
 // Actual chart creation
